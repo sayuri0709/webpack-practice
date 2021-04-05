@@ -15,6 +15,15 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(ts|tex)/,
+        exclude: /node_modules/, // node_modules内のファイルを除外
+        use: [
+          {
+            loader: 'ts-loader'
+          }
+        ]
+      },
+      {
         test: /\.vue/,
         exclude: /node_modules/, // node_modules内のファイルを除外
         use: [
